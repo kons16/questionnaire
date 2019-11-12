@@ -20,3 +20,25 @@
 .App-link {
   color: #09d3ac;
 }
+
+#question_box {
+  display: grid;
+  margin-left: 200px;
+  margin-bottom: 50px;
+  grid-template-columns: repeat(5,200px);
+  justify-content: center;
+}
+#title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+#question_text_color {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+#chart_box {
+  margin: 0 auto;
+}
