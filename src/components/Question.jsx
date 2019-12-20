@@ -133,7 +133,7 @@ class Question extends Component {
         },
         layout: {
           padding: {
-            bottom: 60
+            bottom: 30
           }
         }
       }
@@ -184,10 +184,21 @@ class Question extends Component {
 
   // パスワードを入力してアンケート結果を見る
   clickKekka = () => {
-    const inputPassword = prompt("結果確認パスワードを入力してください。");
+    const inputPassword = prompt("結果を見るにはパスワードを入力してください。");
     if(inputPassword === this.props.password){
       this.setState({ disabled: true });
       this.makeGraphData("");
+    }else if(inputPassword !== this.props.password && inputPassword !== null){
+      window.alert("パスワードが違います");
+    }
+  }
+
+  // アンケートを削除する
+  deleteQ = () => {
+    const inputPassword = prompt("削除をするにはパスワードを入力してください。");
+    if(inputPassword === this.props.password){
+      db.collection('question').doc(this.props.id).delete();
+      window.location.reload();
     }else if(inputPassword !== this.props.password && inputPassword !== null){
       window.alert("パスワードが違います");
     }
@@ -227,6 +238,8 @@ class Question extends Component {
           </ThemeProvider>
             <img src='../eye.png' alt='' onClick={this.clickKekka}
               style={{width: 50, height: 45}} />
+            <img src='../batsu.png' alt='' onClick={this.deleteQ}
+              style={{width: 35, height: 35}} />
         </div>
         <div>
           { this.state.data.datasets.length !== 0 && (

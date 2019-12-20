@@ -23,9 +23,9 @@
 
 #question_box {
   display: grid;
-  margin-left: 200px;
+  margin-left: 150px;
   margin-bottom: 50px;
-  grid-template-columns: repeat(5,200px);
+  grid-template-columns: 200px 200px 200px 200px 70px 70px;
   justify-content: center;
 }
 #title {
