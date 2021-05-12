@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.5.2",
-    "chart.js": "^2.9.2",
+    "chart.js": "^2.9.4",
     "firebase": "^7.2.3",
     "react": "^16.11.0",
     "react-chartjs-2": "^2.8.0",
